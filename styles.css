@@ -1,0 +1,69 @@
+@import 'https://fonts.googleapis.com/css?family=Roboto:400,500,600,700,900';
+
+* {
+    box-sizing: border-box;
+    font-family: 'Roboto';
+}
+
+body {
+    height: 100vh;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    background-color: #c7c7c7;
+}
+
+.container {
+    width: 600px;
+    height: 600px;
+    background-color: #fff;
+
+    display: flex;
+    flex-wrap: wrap;
+    user-select: none;
+}
+
+.container div {
+    width: calc(100% / 16); 
+    height: calc(100% / 16); 
+  }
+
+/* BUTTON STYLING */
+.buttons {
+    margin-right: 50px;
+    background-color: #ECF0F1 ;
+    border-radius: 5px;
+
+    width: 100px;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+}   
+
+button {
+    margin: 10px;
+    padding: 5px;
+    border-radius: 5px;
+    border: 0;
+    box-shadow: 0 0 2px black;
+    font-size: 25px;
+    font-weight: 600;
+
+    color: #fff;
+}
+
+.clear {
+    background-color: #cc2e2e;
+}
+.new {
+    background-color: #3bcc2e;
+}
+
+button:hover {
+    transform: scale(1.05);
+}
