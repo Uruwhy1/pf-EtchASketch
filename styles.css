@@ -20,6 +20,8 @@ body {
     width: 600px;
     height: 600px;
     background-color: #fff;
+    box-sizing: content-box;
+    border: 10px solid #8B4513;
 
     display: flex;
     flex-wrap: wrap;
@@ -34,10 +36,8 @@ body {
 /* BUTTON STYLING */
 .buttons {
     margin-right: 50px;
-    background-color: #ECF0F1 ;
+    background-color: #8B4513  ;
     border-radius: 5px;
-
-    width: 100px;
 
     display: flex;
     flex-direction: column;
@@ -45,8 +45,23 @@ body {
     align-items: center;
 }   
 
+.division {
+    padding: 5px;
+    margin: 15px;
+    width: 80%;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: stretch;
+
+    background-color: rgba(255, 255, 255, 0.404);
+    border-radius: 5px;
+}
+
+
 button {
-    margin: 10px;
+    margin: 10px 0 5px 0;
     padding: 5px;
     border-radius: 5px;
     border: 0;
@@ -57,13 +72,30 @@ button {
     color: #fff;
 }
 
-.clear {
-    background-color: #cc2e2e;
-}
-.new {
-    background-color: #3bcc2e;
-}
-
 button:hover {
     transform: scale(1.05);
+}
+
+
+
+/* NEW AND CLEAR */
+
+.clear {
+    background-color: #E74C3C;
+}
+.clear:hover {
+    background-color: #C0392B;
+}
+
+.new {
+    background-color: #2ECC71;
+}
+.new:hover {
+    background-color: #27AE60 ;
+}
+
+/* REST OF BUTTONS */ 
+
+.color-choices button, .effects button {
+    background-color: #0a050036;
 }
