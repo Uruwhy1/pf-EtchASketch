@@ -83,6 +83,7 @@ userPicked = false;
 document.querySelector('.color-user').addEventListener('change', (event) => {
     interactionCount = -1;
     userPicked = true;
+    event.target.style.backgroundColor = '#f1c40f';
     // Reset background color for other buttons
     document.querySelector('.color-black').style.backgroundColor = "";
     document.querySelector('.color-RGB').style.backgroundColor = "";
@@ -91,12 +92,14 @@ document.querySelector('.color-user').addEventListener('change', (event) => {
 function nextUserColor() {
     interactionCount++
     const userColor = document.querySelector('.color-user').value;
+
     const rgb = hexToRgb(userColor); // Convert hexadecimal color to RGB
     const { r, g, b } = rgb;
+    const increment = interactionCount * 10;
 
-    const newR = Math.max(0, r - interactionCount * 5); // Decrease each component by the increment
-    const newG = Math.max(0, g - interactionCount * 5);
-    const newB = Math.max(0, b - interactionCount * 5);
+    const newR = Math.max(0, r - increment); // Decrease each component by the increment
+    const newG = Math.max(0, g - increment);
+    const newB = Math.max(0, b - increment);
 
     return `rgb(${newR}, ${newG}, ${newB})`;
 }
@@ -131,7 +134,7 @@ let interactionCount = -1;
 // Function to get the next color based on the current interaction count
 function getNextColor() {
     interactionCount++; 
-    const increment = interactionCount * 5;
+    const increment = interactionCount * 10;
 
     if (lastColorFunction === getRandomRGBColor) {
         // If the last color function is RGB, progressively darken each RGB component
